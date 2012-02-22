@@ -18,13 +18,12 @@ The basic building block was from Brian McCallister, and can be found
 
 This has only been tested on OS X Lion using
 [Emacs For Mac OS X](http://emacsformacosx.com/).  In particular, the
-location of Emacs is hard-coded as
+location of Emacs is assumed to be
 /Applications/Emacs.app/Contents/MacOS/Emacs, and the location of
-emacsclient is hard-coded as /Applications/Emacs.app/Contents/MacOS/bin/emacsclient.
+emacsclient is assumed to be /Applications/Emacs.app/Contents/MacOS/bin/emacsclient.
 
-The apps are written in AppleScript, so the hard-coded path is easy
-enough to change by opening Emacs Client.app in the Apple Script
-Editor.
+These paths are very easy to change by modifying the ```set emacs_path```
+and ```set emacs_client_path``` lines.
 
 # To Do List
 
@@ -32,4 +31,4 @@ Editor.
 Client as a default option
 
 * Configure Emacs.app so that it won't appear in the Dock, but still
-offers a menu bar.
+offers a menu bar.  The LSUIElement flag takes away both Dock and menu bar.
